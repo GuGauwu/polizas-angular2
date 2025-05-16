@@ -1,0 +1,187 @@
+<p>nueva-poliza works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container-fluid mt-3" style="font-family: Arial, sans-serif;">
+    <!-- Título -->
+    <h4 class="fw-bold mb-3">NUEVA PÓLIZA</h4>
+
+    <!-- Fecha y Tipo -->
+    <div class="row mb-4">
+        <div class="col-md-2">
+            <label class="fw-bold d-block">Fecha</label>
+            <div class="input-group">
+                <input type="date" class="form-control" value="2025-04-01">
+                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label class="fw-bold d-block">Tipo</label>
+            <select class="form-select">
+                <option selected>Ingreso</option>
+                <option>Egreso</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Pestañas -->
+    <ul class="nav nav-tabs mb-3">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#infoGeneral">INFORMACIÓN GENERAL</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#detalle">DETALLE</a>
+        </li>
+    </ul>
+
+    <!-- Contenido de pestañas -->
+    <div class="tab-content">
+        <!-- Pestaña Información General -->
+        <div class="tab-pane fade show active" id="infoGeneral">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <!-- Tipo Documento -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="fw-bold d-block">Tipo Documento</label>
+                            <select class="form-select">
+                                <option selected>OFICIO DE AUTORIZACIÓN</option>
+                                <option>DOCUMENTO INTERNO</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fw-bold d-block"># de Cta. de Cheques</label>
+                            <select class="form-select">
+                                <option selected>2025 - 65510685593 [SANTANDER] → CTA. 65510685593 RECTORIA SUBSIDIO ESTATAL 2025</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Captura y Clasificación -->
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <label class="fw-bold d-block">Tipo de Captura</label>
+                            <select class="form-select">
+                                <option selected>Manual Capturada</option>
+                                <option>Automática</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fw-bold d-block">Clasificación</label>
+                            <select class="form-select">
+                                <option selected>ESTATAL</option>
+                                <option>FEDERAL</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fw-bold d-block"># de Póliza</label>
+                            <div class="p-2 border bg-light">04E 0001</div>
+                        </div>
+                    </div>
+
+                    <!-- Concepto -->
+                    <div class="mb-3">
+                        <label class="fw-bold d-block">Concepto</label>
+                        <textarea class="form-control" rows="3">REGISTRO DE INTERESES GENERADOS CORRESPONDIENTES AL PERIODO DEL 01 AL 31 DE MARZO DEL 2025, CUENTAS 65510685593, 65510726095, 65510673474, BANCO SANTANDER SERFIN</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pestaña Detalle -->
+        <div class="tab-pane fade" id="detalle">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <!-- Fila de inputs -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="fw-bold d-block">Cuenta Contable</label>
+                            <select class="form-select">
+                                <option>1113.12125.11101.00003 - CTA. 6551072574 RECTORIA DIRECCIÓN DE PERSONAS JURÍDICAS</option>
+                                <option>1113.12125.11101.00002 - CTA. 6551072608 RECTORIA SECRETARIA TECNICA</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="fw-bold d-block">Cargo ($)</label>
+                            <input type="text" class="form-control" value="0.00">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="fw-bold d-block">Abono ($)</label>
+                            <input type="text" class="form-control" value="0.00">
+                        </div>
+                        <div class="col-md-2 d-flex align-items-end">
+                            <button class="btn btn-success w-100">Agregar</button>
+                        </div>
+                    </div>
+
+                    <!-- Tabla de movimientos -->
+                    <div class="table-responsive mb-3">
+                        <table class="table table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th width="5%"># Movto</th>
+                                    <th width="55%">Cuenta Contable</th>
+                                    <th width="15%">Cargo ($)</th>
+                                    <th width="15%">Abono ($)</th>
+                                    <th width="10%">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1113.12125.11101.00003 - CTA. 6551072574 RECTORIA DIRECCIÓN DE PERSONAS JURÍDICAS</td>
+                                    <td>$2.03</td>
+                                    <td>$0.00</td>
+                                    <td class="text-nowrap">
+                                        <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        <button class="btn btn-sm btn-outline-primary">Editar</button>
+                                    </td>
+                                </tr>
+                                <!-- Más filas... -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Totales -->
+                    <div class="row">
+                        <div class="col-md-3 offset-md-6">
+                            <label class="fw-bold d-block">TOTAL CARGOS</label>
+                            <div class="p-2 border bg-light">$63.09</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="fw-bold d-block">TOTAL ABONOS</label>
+                            <div class="p-2 border bg-light">$63.09</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones finales -->
+    <div class="d-flex justify-content-end gap-2 mt-3">
+        <button class="btn btn-secondary">Cancelar</button>
+        <button class="btn btn-primary">Guardar</button>
+    </div>
+</div>
+
+<!-- Script para pestañas -->
+<script>
+    // Activar pestañas de Bootstrap
+    const tabElms = document.querySelectorAll('a[data-bs-toggle="tab"]');
+    tabElms.forEach(tabEl => {
+        tabEl.addEventListener('shown.bs.tab', () => {
+            // Puedes agregar lógica adicional al cambiar de pestaña
+        });
+    });
+</script>
+</body>
+</html>
