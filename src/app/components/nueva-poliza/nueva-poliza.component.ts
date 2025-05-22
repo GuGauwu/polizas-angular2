@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
+import { TabsComponent } from '../tabs/tabs.component'; 
 
 @Component({
   selector: 'app-nueva-poliza',
