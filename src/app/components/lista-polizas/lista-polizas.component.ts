@@ -1,7 +1,6 @@
+import { CommonModule, DatePipe, DecimalPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-// Módulos de PrimeNG
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
@@ -10,17 +9,22 @@ import { InputTextModule } from 'primeng/inputtext';
 @Component({
   selector: 'app-lista-polizas',
   standalone: true, 
-  imports: [CommonModule,
+  imports: [
+    CommonModule,
     FormsModule, 
-    TableModule, //
+    TableModule,
     DropdownModule,
     ButtonModule,
-    InputTextModule],
+    InputTextModule,
+    DatePipe
+  ],
+  providers: [DecimalPipe], // <-- Añade DecimalPipe aquí
   templateUrl: './lista-polizas.component.html',
   styleUrl: './lista-polizas.component.css'
 })
+
 export class ListaPolizasComponent {
-   // Variables para los dropdowns
+  // Variables para los dropdowns
   centrosContables = [
     { nombre: '11101 - OFICINA DEL RECTOR' },
     { nombre: '11102 - DEPARTAMENTO X' }
@@ -57,9 +61,6 @@ export class ListaPolizasComponent {
       concepto: 'REGISTRO DE INTERESES GENERADOS...',
       cargo: 851.09,
       abono: 852.09
-    },
-    // Puedes añadir más pólizas aquí...
+    }
   ];
 }
-
-
